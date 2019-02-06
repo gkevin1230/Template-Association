@@ -17,6 +17,35 @@ rouge fonce : #6e1b23
 /**********************/
 /*      Components    */
 /**********************/
+body{
+    color: #666666;
+}
+
+h2{ text-transform: uppercase; position: relative; margin-bottom: 50px !important; }
+h2::before{ 
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-color: #9cc212;
+    width: 15px;
+    height: 7px;
+    right: 0;
+}
+h2::after{ 
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    background-color: #7a941a;
+    width: 15px;
+    height: 7px;
+    right: 0;
+}
+h3{ font-size: 1.25rem; }
+a{ color: #4e7811; }
+a:hover{ color: #9cc212; }
+
 section{
     margin: 100px 0;
 }
@@ -30,6 +59,9 @@ button, .button, a.elementor-button, .elementor-element.elementor-button-success
 }
 .elementor-element.elementor-button-success .elementor-button{
     background-color: #9cc212;
+}
+.elementor-element.elementor-button-success .elementor-button:hover{
+    background-color: #4e7811;
 }
 
 /****************/
@@ -100,6 +132,9 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
     margin: 8px 8px 8px 8px;
     border: 1px solid #dadada;
 }
+.home .avantages .bloc-avantage > div p{
+    font-size: 0.9em;
+}
 .home .avantages .bloc-avantage > div .elementor-image{
     display: inline-block;
     background: #e6e6e6;
@@ -110,10 +145,27 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
     line-height: 100px;
     vertical-align: middle;
 }
+.home .bloc-avantage .elementor-element.elementor-button-success .elementor-button{
+    background: transparent;
+    border: 2px solid #9cc212;
+    color: #4e7811;
+}
+.home .bloc-avantage .elementor-element.elementor-button-success .elementor-button:hover{
+    background: #9cc212;
+    border: 2px solid #9cc212;
+    color: #fff;
+}
 /*titre*/
 .home .avantages .bloc-avantage.titre-avantage > div{
     border: 2px dashed #dadada;
     padding: 20px 35px;
+}
+.home .avantages .bloc-avantage.titre-avantage > div h2{
+    font-size: 1.4rem;
+    margin-bottom: 0 !important;
+}
+.home .avantages .bloc-avantage.titre-avantage > div h2::before, .home .avantages .bloc-avantage.titre-avantage > div h2::after{
+    display: none;
 }
 .home .avantages .bloc-avantage.titre-avantage > div .elementor-image{
     background: transparent;
@@ -125,4 +177,17 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
 }
 .home .avantages .bloc-avantage.tarifs-avantage > div .elementor-image{
     background: #b7d743;
+}
+.home .bloc-avantage.tarifs-avantage .elementor-element.elementor-button-success .elementor-button{
+    background: #b7d743;
+    color: #4e7811;
+}
+
+/*Texte ASA Normandie*/
+.home .asa-normandie{
+    padding: 70px 0;
+}
+
+.home .asa-normandie img{
+    border-radius: 20px 0;
 }
