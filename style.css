@@ -7,4 +7,122 @@ Template: wp-bootstrap-starter
 Version: 1.0
 */
 
-/**/
+/*
+COULEURS : 
+vert claire : #9cc212
+vert fonce : #4e7811
+rouge fonce : #6e1b23
+*/
+
+/**********************/
+/*      Components    */
+/**********************/
+section{
+    margin: 100px 0;
+}
+section.image-principale, section#primary, section.avantages{
+    margin: 0;
+}
+
+/*Boutons*/
+button, .button, a.elementor-button, .elementor-element.elementor-button-success, a.elementor-button-link{
+    border-radius: 200px !important;
+}
+.elementor-element.elementor-button-success .elementor-button{
+    background-color: #9cc212;
+}
+
+/****************/
+/*  Pre-Header  */
+/****************/
+.pre-header{
+    background-color: #6e1b23;
+    padding: 10px 0px;
+}
+.pre-header ul{
+    margin: 0;
+}
+.pre-header ul li{
+    list-style: none;
+}
+.pre-header ul li a{
+    color: #fff;
+    font-size: 13px;
+}
+
+/****************/
+/*    HEADER    */
+/****************/
+header#masthead {
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+/*Menu*/
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a{
+    color: #787878;
+}
+
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a{
+    color: #9cc212;
+}
+
+/*********************/
+/*    CONTENU HOME   */
+/*********************/
+/*Image principale home*/
+.home .image-principale{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+.home .image-principale .elementor-widget-wrap{
+    margin-top: -150px;
+}
+
+.home h1{
+    font-size: 3.5em;
+    font-weight: 900;
+}
+
+/*A la une*/
+.home .a-la-une {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 21px 52px 0px rgba(0, 0, 0, 0.14);
+    margin-top: -210px;
+    padding: 35px;
+    border-top: 8px solid #4e7811;
+}
+  
+/*Nos avantages*/
+.home .avantages .bloc-avantage > div{
+    border-radius: 5px;
+    margin: 8px 8px 8px 8px;
+    border: 1px solid #dadada;
+}
+.home .avantages .bloc-avantage > div .elementor-image{
+    display: inline-block;
+    background: #e6e6e6;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+}
+/*titre*/
+.home .avantages .bloc-avantage.titre-avantage > div{
+    border: 2px dashed #dadada;
+    padding: 20px 35px;
+}
+.home .avantages .bloc-avantage.titre-avantage > div .elementor-image{
+    background: transparent;
+}
+/*tarifs*/
+.home .avantages .bloc-avantage.tarifs-avantage > div{
+    background: #9cc212;
+    border: 1px solid #9cc212;
+}
+.home .avantages .bloc-avantage.tarifs-avantage > div .elementor-image{
+    background: #b7d743;
+}
