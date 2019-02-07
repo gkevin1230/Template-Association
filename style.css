@@ -187,7 +187,41 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
 .home .asa-normandie{
     padding: 70px 0;
 }
-
 .home .asa-normandie img{
     border-radius: 20px 0;
+}
+
+/*Call to action*/
+.home .call-to-action{
+    padding: 40px 0;
+}
+
+/*Nos partenaires*/
+.home .titre-center h2::before{ 
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    margin: 0 auto;
+    background-color: #9cc212;
+    width: 15px;
+    height: 7px;
+    right: 0;
+}
+.home .titre-center h2::after{ 
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: -15px;
+    margin: 0 auto;
+    background-color: #7a941a;
+    width: 15px;
+    height: 7px;
+    right: 0;
+}
+.slick-slider .slick-list, .slick-slider .slick-track{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
