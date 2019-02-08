@@ -17,6 +17,7 @@ rouge fonce : #6e1b23
 /**********************/
 /*      Components    */
 /**********************/
+
 body{
     color: #666666;
 }
@@ -42,9 +43,36 @@ h2::after{
     height: 7px;
     right: 0;
 }
+.titre-center h2::before{ 
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    margin: 0 auto;
+    background-color: #9cc212;
+    width: 15px;
+    height: 7px;
+    right: 0;
+}
+.titre-center h2::after{ 
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: -15px;
+    margin: 0 auto;
+    background-color: #7a941a;
+    width: 15px;
+    height: 7px;
+    right: 0;
+}
 h3{ font-size: 1.25rem; }
 a{ color: #4e7811; }
 a:hover{ color: #9cc212; }
+
+.nav > li > a:focus, .nav > li > a:hover{
+    background-color: transparent;
+    text-decoration: underline;
+}
 
 section{
     margin: 100px 0;
@@ -67,6 +95,7 @@ button, .button, a.elementor-button, .elementor-element.elementor-button-success
 /****************/
 /*  Pre-Header  */
 /****************/
+
 .pre-header{
     background-color: #6e1b23;
     padding: 10px 0px;
@@ -85,6 +114,7 @@ button, .button, a.elementor-button, .elementor-element.elementor-button-success
 /****************/
 /*    HEADER    */
 /****************/
+
 header#masthead {
     background-color: #ffffff;
     box-shadow: none;
@@ -102,36 +132,8 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
 /*********************/
 /*    CONTENU HOME   */
 /*********************/
-/*Image principale home*/
-.home .image-principale{
-    height: 70vh;
-    display: flex;
-    align-items: center;
-}
-.home .image-principale .elementor-widget-wrap{
-    margin-top: -150px;
-}
-
-.home h1{
-    font-size: 3.5em;
-    font-weight: 900;
-}
-
-/*A la une*/
-.home .a-la-une {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 21px 52px 0px rgba(0, 0, 0, 0.14);
-    margin-top: -210px;
-    padding: 35px;
-    border-top: 8px solid #4e7811;
-}
   
 /*Nos avantages*/
-.home .avantages .bloc-avantage > div{
-    border-radius: 5px;
-    margin: 8px 8px 8px 8px;
-    border: 1px solid #dadada;
-}
 .home .avantages .bloc-avantage > div p{
     font-size: 0.9em;
 }
@@ -145,25 +147,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
     line-height: 100px;
     vertical-align: middle;
 }
-.home .bloc-avantage .elementor-element.elementor-button-success .elementor-button{
-    background: transparent;
-    border: 2px solid #9cc212;
-    color: #4e7811;
-}
-.home .bloc-avantage .elementor-element.elementor-button-success .elementor-button:hover{
-    background: #9cc212;
-    border: 2px solid #9cc212;
-    color: #fff;
-}
 /*titre*/
-.home .avantages .bloc-avantage.titre-avantage > div{
-    border: 2px dashed #dadada;
-    padding: 20px 35px;
-}
-.home .avantages .bloc-avantage.titre-avantage > div h2{
-    font-size: 1.4rem;
-    margin-bottom: 0 !important;
-}
 .home .avantages .bloc-avantage.titre-avantage > div h2::before, .home .avantages .bloc-avantage.titre-avantage > div h2::after{
     display: none;
 }
@@ -171,57 +155,49 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
     background: transparent;
 }
 /*tarifs*/
-.home .avantages .bloc-avantage.tarifs-avantage > div{
-    background: #9cc212;
-    border: 1px solid #9cc212;
-}
-.home .avantages .bloc-avantage.tarifs-avantage > div .elementor-image{
-    background: #b7d743;
-}
-.home .bloc-avantage.tarifs-avantage .elementor-element.elementor-button-success .elementor-button{
-    background: #b7d743;
-    color: #4e7811;
-}
-
-/*Texte ASA Normandie*/
-.home .asa-normandie{
-    padding: 70px 0;
-}
-.home .asa-normandie img{
-    border-radius: 20px 0;
-}
-
-/*Call to action*/
-.home .call-to-action{
-    padding: 40px 0;
+.bloc-avantage.tarifs-avantage > div .elementor-image{
+    background: #b7d743 !important;
 }
 
 /*Nos partenaires*/
-.home .titre-center h2::before{ 
-    content: '';
-    position: absolute;
-    top: 50px;
-    left: 15px;
-    margin: 0 auto;
-    background-color: #9cc212;
-    width: 15px;
-    height: 7px;
-    right: 0;
-}
-.home .titre-center h2::after{ 
-    content: '';
-    position: absolute;
-    top: 50px;
-    left: -15px;
-    margin: 0 auto;
-    background-color: #7a941a;
-    width: 15px;
-    height: 7px;
-    right: 0;
-}
 .slick-slider .slick-list, .slick-slider .slick-track{
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
+}
+
+/*************************/
+/*    OFFRES D'EMPLOIS   */
+/*************************/
+
+section.offre-emploi{
+    margin: 20px 0;
+}
+
+/****************/
+/*    FOOTER    */
+/****************/
+
+footer{
+    background-color: #242424 !important;
+    color: #fff !important;
+    padding: 60px 0 20px 0;
+}
+footer h3.widget-title{
+    font-size: 1.2em;
+    color: #9cc212;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#footer-widget.bg-light{
+    background-color: #242424 !important;
+}
+footer .nav-link{
+    padding: 3px 0;
+}
+footer .copyright{
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #707070;
 }

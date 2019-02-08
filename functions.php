@@ -11,6 +11,8 @@ function register_my_menus() {
   register_nav_menus(
   array(
   'pre-header-menu' => __( 'Menu Pre Header' ),
+  'footer1-menu' => __( 'Footer 1 Menu' ),
+  'footer2-menu' => __( 'Footer 2 Menu' ),
   )
   );
  }

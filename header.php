@@ -31,6 +31,7 @@
                 wp_nav_menu ( array (
                 'theme_location' => 'pre-header-menu' ,
                 'menu_class' => 'pre-header-menu', 
+                'container_class' => 'd-flex navbar-collapse justify-content-end',
                 ) ); ?>
             </nav>
         </div>    
