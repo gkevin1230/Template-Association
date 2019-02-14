@@ -33,32 +33,31 @@ function register_my_menus() {
 
   global $wpdb;
 
-  $request = "SELECT ID, post_title, post_excerpt FROM $wpdb->posts WHERE post_status = 'publish' AND post_type='post' ORDER BY post_date DESC LIMIT $no_posts";
-  $posts = $wpdb->get_results($request);
+  $args = array( 'numberposts' => 3, 'order'=> 'ASC', 'orderby' => 'date' );
+  $postslist = get_posts( $args );
 
   $output .= '<div class="row">';
 
-  if($posts) {
-    foreach ($posts as $posts) {
-      $post_title = stripslashes($posts->post_title);
-      $permalink = get_permalink($posts->ID);
+  foreach ($postslist as $post) :  setup_postdata($post);
 
-      $output .= '<div class="last-post col">';
+  $output .= $posts;
+    $output .= '<div class="last-post col-md">';
+      $output .= '<div class="img-last-post">'. get_the_post_thumbnail( $post ) .'</div>';
+        $output .= '<div class="text-last-post">';
 
-        $output .= '<div class="img-last-post">image</div>';
-        $output .= '<date class="date-last-post">09 janvier 2019</date>';
-        $output .= '<span class="separator-last-post"></span>';
+          $output .= '<date class="date-last-post">' . get_the_date("j F Y",$post ) . '</date>';
+          $output .= '<span class="separator-last-post"></span>';
+          $output .= '<a href="'. get_the_permalink($post) . '" rel="bookmark" title="' . $post->post_title . '"><h4 class="titre-last-post">' . $post->post_title . '</h4></a>';
+          $output.= '<div class="excerpt-last-post">' . get_the_excerpt() . '</div>';
 
-        $output .= '<a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '"><h4 class="titre-last-post">' . htmlspecialchars($post_title).'</h4></a>';
-        
-        $output.= '<div class="excerpt-last-post">' . stripslashes($posts->post_excerpt) . '</div>';
-        
-      $output .= '</div>';
-    }
+        $output .= '</div>';  
     $output .= '</div>';
-  } else {
-          $output .= '<li>No posts found</li>';
-  }
+
+  endforeach;
+
+  $output .= '</div>';
+
+
 
   echo $output;
 }

@@ -166,6 +166,12 @@ footer .copyright{
     border-radius: 5px;
     margin: 0 5px;
     border: 1px solid #dadada;
+    padding: 0;
+}
+.last-post .img-last-post img{
+    border-radius: 5px 5px 0 0;
+}
+.last-post .text-last-post{
     padding: 25px;
 }
 .last-post .date-last-post{
