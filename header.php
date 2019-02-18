@@ -24,6 +24,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+    
+    <?php if ( has_nav_menu( 'pre-header-menu' ) ): ?>
     <div class="pre-header">
         <div class="container">
             <nav class="navbar navbar-expand-xl p-0">
@@ -34,7 +36,8 @@
                 'container_class' => 'd-flex navbar-collapse justify-content-end',
                 ) ); ?>
             </nav>
-        </div>    
+        </div>
+        <?php endif; ?>    
     </div>
 	<header id="masthead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
         <div class="container">

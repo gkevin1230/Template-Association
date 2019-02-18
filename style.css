@@ -31,8 +31,14 @@ a:hover{ color: #9cc212; }
     background-color: transparent;
     text-decoration: underline;
 }
-section{
+.home section{
     margin: 100px 0;
+}
+section{
+    margin: 50px 0;
+}
+section .elementor-inner-section{
+    margin: 0;
 }
 section.image-principale, section#primary, section.avantages{
     margin: 0;
@@ -139,6 +145,9 @@ footer{
     background-color: #242424 !important;
     color: #fff !important;
     padding: 60px 0 20px 0;
+}
+footer section {
+    margin: 0 !important;
 }
 footer h3.widget-title{
     font-size: 1.2em;
