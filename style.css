@@ -93,11 +93,17 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a{
 body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a{
     color: #9cc212;
 }
+.dropdown-menu{
+    min-width: 13rem;
+}
+.dropdown-menu li a:hover{
+    color: #9cc212;
+}
 
 /*********************/
 /*    CONTENU HOME   */
 /*********************/
-  
+
 /*Nos avantages*/
 .home .avantages .bloc-avantage > div p{
     font-size: 0.9em;
@@ -135,6 +141,14 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
 
 section.offre-emploi{
     margin: 20px 0;
+}
+
+/*****************************/
+/*          CONTACT          */
+/*****************************/
+
+.wpcf7-form-control, .wpcf7 label{
+    width: 100%;
 }
 
 /****************/
