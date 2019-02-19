@@ -99,6 +99,8 @@
         </div>
     <?php endif; ?>
 	<div id="content" class="site-content">
-		<div class="container">
+    <?php if ( !is_archive() ): ?>
+        <div class="container">
+    <?php endif; ?>
 			<div class="row">
                 <?php endif; ?>
