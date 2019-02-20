@@ -139,6 +139,19 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
     border-radius: 5px;
 }
 
+/****************/
+/*    EQUIPE    */
+/****************/
+.equipe figure.elementor-image-box-img{
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;   
+}
+
+
 /*************************/
 /*    OFFRES D'EMPLOIS   */
 /*************************/
@@ -156,30 +169,135 @@ section.offre-emploi{
 }
 
 /*********************/
-/*  PAGE CATEGORIES  */
+/* HEADER AUTRES PAGE */
 /*********************/
 .archive #content.site-content{
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0 15px;
 }
 section.background-archive{
     background-image: url(http://localhost/asavpa27/wp-content/uploads/2019/01/home-banner.jpg);
     background-size: cover;
-    margin: 0;
+    margin: 0 -15px 50px -15px;
+    position: relative;
+}
+.background-overlay{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: transparent;
+    background-image: linear-gradient(150deg, #9cc212 0%, #c61d11 100%);
+    opacity: 0.7;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    filter: brightness( 100% ) contrast( 100% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
+}
+.elementor-shape {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+    z-index: 2;
+    pointer-events: none;
+}
+.elementor-shape-bottom svg {
+    width: calc(300% + 1.3px);
+    display: block;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.elementor-shape .elementor-shape-fill {
+    fill: #fff;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 .header-titre{
     min-height: 40vh; 
     display: flex;
     justify-content: center;
     align-items: center; 
+    flex-direction: column;
+    z-index: 999;
+    position: relative;
+    color: #fff;
+}
+.header-titre p{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.header-titre .elementor-divider {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: relative;
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: #9cc212;
+    width: 5%;
 }
 .header-titre h1{
-    color: #ffffff;
     font-size: 3.5em;
     font-weight: 900;
     text-decoration: none;
 }
 
+/*************************/
+/* ARTICLE BLOG/ARCHIVES */
+/*************************/
+.post.hentry {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.post.hentry .inner-wrap{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.post.hentry .post-thumbnail{
+    width: calc( 100% - 50%);
+    overflow: hidden;
+}
+.post.hentry .post-thumbnail img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.post.hentry .content-wrap{
+    width: 50%;
+    margin: 30px 0 30px -30px;
+    background-color: #ffffff;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 0 1px 25px rgba(0,0,0,.05);
+    z-index: 1;
+}
+.entry-meta {
+    color: #adadad;
+    margin-bottom: 0px;
+    line-height: 1.3em;
+    font-size: 12px;
+}
+.entry-meta .entry-meta-date{
+    margin-right: 0;
+    line-height: 1.6em;
+    display: inline;
+}
+.entry-meta .entry-meta-date i{
+    margin-right: 2px;
+    font-weight: normal;
+}
+.entry-meta .entry-meta-date i:before{
+    content: "\f073" !important;
+}
 /****************/
 /*    FOOTER    */
 /****************/
@@ -239,4 +357,18 @@ footer .copyright{
 }
 .last-post .titre-last-post{
     font-size: 1.2em;
+}
+
+
+/***********************/
+/*    MEDIA QUERIES    */
+/***********************/
+/* Mobile Device (less than 768px)*/
+@media (max-width: 767.99px) {
+    .elementor-27 .elementor-element.elementor-element-2b3c87b > .elementor-element-populated{
+        margin: 0 15px 20px 15px !important;
+    }
+    .elementor-27 .elementor-element.elementor-element-d96bf89 > .elementor-widget-container{
+        margin: 0 !important;
+    }
 }
