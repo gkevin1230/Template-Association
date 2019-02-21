@@ -22,6 +22,12 @@ rouge fonce : #6e1b23
 
 body{
     color: #666666;
+    opacity: 1;
+    transition: 1s opacity;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 h2{ text-transform: uppercase; position: relative; font-family: 'Amatic SC', sans-serif; font-size: 3.5em; }
 h3{ font-size: 1.25rem; }
@@ -175,7 +181,7 @@ section.offre-emploi{
     padding: 0 15px;
 }
 section.background-archive{
-    background-image: url(http://localhost/asavpa27/wp-content/uploads/2019/01/home-banner.jpg);
+    background-image: url(/wp-content/uploads/2019/02/home-banner.jpg);
     background-size: cover;
     margin: 0 -15px 50px -15px;
     position: relative;
@@ -222,6 +228,7 @@ section.background-archive{
 }
 .header-titre{
     min-height: 40vh; 
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -370,5 +377,15 @@ footer .copyright{
     }
     .elementor-27 .elementor-element.elementor-element-d96bf89 > .elementor-widget-container{
         margin: 0 !important;
+    }
+    .post.hentry .inner-wrap{
+        flex-direction: column;
+    }
+    .post.hentry .post-thumbnail {
+        width: 100%;
+    }
+    .post.hentry .content-wrap {
+        width: 100%;
+        margin: 0;
     }
 }
