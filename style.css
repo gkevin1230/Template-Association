@@ -29,6 +29,7 @@ body.fade-out {
     opacity: 0;
     transition: none;
 }
+h1{ font-size: 3.5em; font-weight: 900; }
 h2{ text-transform: uppercase; position: relative; font-family: 'Amatic SC', sans-serif; font-size: 3.5em; }
 h3{ font-size: 1.25rem; }
 a{ color: #4e7811; }
@@ -370,7 +371,7 @@ footer .copyright{
 /***********************/
 /*    MEDIA QUERIES    */
 /***********************/
-/* Mobile Device (less than 768px)*/
+/* talbet Device (less than 768px)*/
 @media (max-width: 767.99px) {
     .elementor-27 .elementor-element.elementor-element-2b3c87b > .elementor-element-populated{
         margin: 0 15px 20px 15px !important;
@@ -388,4 +389,9 @@ footer .copyright{
         width: 100%;
         margin: 0;
     }
+}
+
+/* talbet Device (less than 768px)*/
+@media (max-width: 425.99px) {
+    h1{ font-size: 3em; }
 }
