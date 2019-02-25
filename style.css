@@ -101,7 +101,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover, body:not(.t
     color: #9cc212;
 }
 .dropdown-menu{
-    min-width: 13rem;
+    min-width: 15rem;
 }
 .dropdown-menu li a:hover{
     color: #9cc212;
@@ -371,7 +371,33 @@ footer .copyright{
 /***********************/
 /*    MEDIA QUERIES    */
 /***********************/
-/* talbet Device (less than 768px)*/
+/* tablet Device (less than 768px)*/
+@media (max-width: 1199.99px) {
+    /*Menu*/
+    body:not(.theme-preset-active) #masthead .navbar-nav{
+        margin-top: 20px;
+        border: 1px solid #ececec;
+        border-radius: 5px;
+    }
+    body:not(.theme-preset-active) #masthead .navbar-nav li:not(:last-child){
+        border-bottom: 1px solid #dfdfdf;
+    }
+    body:not(.theme-preset-active) #masthead .navbar-nav > li > a{
+        font-size: 1em;
+        margin-left: 0;
+        padding: 10px 20px;
+    }
+    .navbar-nav .dropdown-menu{
+        margin: 0;
+        background-color: #f7f7f7;
+        border-radius: 0;
+    }
+    .navbar-nav .dropdown-menu li{
+        padding: 10px 20px;
+    }
+}
+
+/* tablet Device (less than 768px)*/
 @media (max-width: 767.99px) {
     .elementor-27 .elementor-element.elementor-element-2b3c87b > .elementor-element-populated{
         margin: 0 15px 20px 15px !important;
@@ -394,4 +420,7 @@ footer .copyright{
 /* talbet Device (less than 768px)*/
 @media (max-width: 425.99px) {
     h1{ font-size: 3em; }
+    .navbar-light .navbar-brand img{
+        width: 65%;
+    }
 }
