@@ -399,6 +399,9 @@ footer .copyright{
 
 /* tablet Device (less than 768px)*/
 @media (max-width: 767.99px) {
+    .navbar-light .navbar-brand img{
+        width: 65%;
+    }
     .elementor-27 .elementor-element.elementor-element-2b3c87b > .elementor-element-populated{
         margin: 0 15px 20px 15px !important;
     }
@@ -417,10 +420,7 @@ footer .copyright{
     }
 }
 
-/* talbet Device (less than 768px)*/
+/* Mobile Device (less than 426px)*/
 @media (max-width: 425.99px) {
     h1{ font-size: 3em; }
-    .navbar-light .navbar-brand img{
-        width: 65%;
-    }
 }
