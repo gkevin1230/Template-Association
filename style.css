@@ -24,7 +24,6 @@ body{
     color: #666666;
     opacity: 1;
     transition: 1s opacity;
-    overflow-x: hidden;
 }
 body.fade-out {
     opacity: 0;
@@ -76,6 +75,8 @@ button, .button, a.elementor-button, .elementor-element.elementor-button-success
 }
 .pre-header ul li{
     list-style: none;
+    display: inline;
+    margin: 0 10px;
 }
 .pre-header ul li a{
     color: #fff;
